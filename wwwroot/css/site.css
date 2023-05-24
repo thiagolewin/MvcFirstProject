@@ -40,10 +40,11 @@ main {
 }
 .cuadradoConjuntos {
   width: 50vw;
-  height: 900px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   padding: 0 50px;
+  margin-top: 50px;
+  flex-wrap: wrap;
 }
 .cuadrado {
   width: 50vw;

@@ -17,24 +17,24 @@
         <div class="indumentarias__vestimenta">
             @{
                 for(int i = 0; i<10;i++) {
-                    string rute = "img/remera/remera" + ViewBag.Equipos[i] + ".png";
-                    <img src='@Url.Content("~/" + rute)' id="@i" nombre="@ViewBag.Equipos[i]">
+                    string rute = "img/remera/remera" + ViewBag.ListaRemeras[i] + ".png";
+                    <img src='@Url.Content("~/" + rute)' id="@i" nombre="@ViewBag.ListaRemeras[i]">
                 }
             }
         </div>
         <div class="indumentarias__vestimenta">
             @{
                 for(int i = 0; i<10;i++) {
-                    string rute = "img/pantalon/pantalon" + ViewBag.Equipos[i] + ".png";
-                    <img src='@Url.Content("~/" + rute)' id="@i" nombre="@ViewBag.Equipos[i]">
+                    string rute = "img/pantalon/pantalon" + ViewBag.ListaPantalones[i] + ".png";
+                    <img src='@Url.Content("~/" + rute)' id="@i" nombre="@ViewBag.ListaPantalones[i]">
                 }
             }
         </div>
         <div class="indumentarias__vestimenta">
             @{
                 for(int i = 0; i<10;i++) {
-                    string rute = "img/medias/medias" + ViewBag.Equipos[i] + ".png";
-                    <img src='@Url.Content("~/" + rute)' id="@i" nombre="@ViewBag.Equipos[i]">
+                    string rute = "img/medias/medias" + ViewBag.ListaMedias[i] + ".png";
+                    <img src='@Url.Content("~/" + rute)' id="@i" nombre="@ViewBag.ListaMedias[i]">
                 }
             }
         </div>

@@ -22,36 +22,14 @@ public class HomeController : Controller
     }
     public IActionResult SelectIndumentaria()
     {
-        string[] equipos = new string[10];
-        equipos[0] = "River";
-        equipos[1] = "Sanlorenzo";
-        equipos[2] = "Talleres";
-        equipos[3] = "Defensayjusticia";
-        equipos[4] = "Estudiantes";
-        equipos[5] = "Rosariocentral";
-        equipos[6] = "Belgrano";
-        equipos[7] = "Lanus";
-        equipos[8] = "Argentinosjuniors";
-        equipos[9] = "Boca";
-        ViewBag.ListaEquipos= Equipos.ListaEquipos;
         ViewBag.ListaMedias= Equipos.ListaMedias;
         ViewBag.ListaPantalones= Equipos.ListaPantalones;
         ViewBag.ListaRemeras= Equipos.ListaRemeras;
-        ViewBag.Equipos = equipos;
         return View();
     }
 
     public IActionResult GuardarIndumentaria (string Equipo, int Media, int Pantalon, int Remera)
     {
-    /*    Equipos.ListaEquipos = new List<string>();
-        Equipos.ListaMedias = new List<string>();
-        Equipos.ListaPantalones = new List<string>();
-        Equipos.ListaRemeras = new List<string>();
-        Equipos.EquiposIndumentaria = new Dictionary<string, Indumentaria>();
-        Equipos.ListaMedias.Add(Media);
-        Equipos.ListaPantalones.Add(Pantalon);
-        Equipos.ListaRemeras.Add(Remera);*/
-
         Indumentaria indu = new Indumentaria(Equipos.ListaMedias[Media],Equipos.ListaPantalones[Pantalon],Equipos.ListaRemeras[Remera]);
         Equipos.IngresarIndumentaria(Equipo,indu);  
         return RedirectToAction("Index");

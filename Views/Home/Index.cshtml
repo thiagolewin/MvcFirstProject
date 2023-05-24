@@ -5,6 +5,10 @@
 
     <a href='@Url.Action("SelectIndumentaria","Home")'>Ir a agregar equipos</a>
     <article class="flex">
+            <div class="divInput">
+                <h2>Ingresar nombre equipo:</h2>
+                <input type="text" name="" id="">
+            </div>
         <div class="cuadradoConjuntos">
             @{ 
                 if (@ViewBag.EquiposCreados != null) {
@@ -12,7 +16,7 @@
                         string rutaRemera= "img/remera/remera" + @ViewBag.EquiposCreados[i.Key].Camiseta + ".png";
                         string rutaPantalon = "img/pantalon/pantalon" + @ViewBag.EquiposCreados[i.Key].Pantalon + ".png";
                         string rutaMedia = "img/medias/medias" + @ViewBag.EquiposCreados[i.Key].Medias + ".png";
-                        <div class="conjunto">
+                        <div class="conjunto" id=@ViewBag.EquiposCreados[i.Key].Camiseta>
                             <img src='@Url.Content("~/" + rutaRemera)' >
                             <img src='@Url.Content("~/" + rutaPantalon)' >
                             <img src='@Url.Content("~/" + rutaMedia)' >
@@ -23,10 +27,5 @@
                 }  
             }
         </div>
-        <div class="cuadrado"> 
-            <div class="divInput">
-                <h2>Ingresar nombre equipo:</h2>
-                <input type="text" name="" id="">
-            </div>
-        </div>
+        
     </article>
